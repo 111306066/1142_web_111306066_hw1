@@ -7,14 +7,14 @@ const designProjects = [
     description:
       "設計出一款適合追星人跑生咖時所需要的APP",
     image: "/design-1.jpg",
-    href: "/design-project/brand-visual",
+    // href: "/design-project/brand-visual",
   },
   {
     title: "政大討論室借閱系統改造",
     description:
       "重新規劃政大討論室借閱系統的界面，讓使用者可以更方便地借閱討論室",
     image: "/design-2.jpg",
-    href: "/design-project/poster-layout",
+    // href: "/design-project/poster-layout",
   },
 ];
 
@@ -42,9 +42,9 @@ export default function DesignProjectPage() {
               <h2 className="project-card-title">{project.title}</h2>
               <p className="project-card-description">{project.description}</p>
 
-              <Link href={project.href} className="project-card-button">
+              {/* <Link href={project.href} className="project-card-button">
                 查看更多
-              </Link>
+              </Link> */}
             </div>
           </article>
         ))}

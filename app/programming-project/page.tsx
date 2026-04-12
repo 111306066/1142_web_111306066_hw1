@@ -7,14 +7,14 @@ const programmingProjects = [
     description:
       "透過訓練大型語言模型建立一個提供專業心理支持的聊天機器人",
     image: "/code-1.jpg",
-    href: "/programming-project/portfolio-site",
+    // href: "/programming-project/portfolio-site",
   },
   {
     title: "安行寶",
     description:
       "設計一款讓長者出行時更安全的APP",
     image: "/code-2.jpg",
-    href: "/programming-project/campus-platform",
+    // href: "/programming-project/campus-platform",
   },
 ];
 
@@ -42,9 +42,9 @@ export default function ProgrammingProjectPage() {
               <h2 className="project-card-title">{project.title}</h2>
               <p className="project-card-description">{project.description}</p>
 
-              <Link href={project.href} className="project-card-button">
+              {/* <Link href={project.href} className="project-card-button">
                 查看更多
-              </Link>
+              </Link> */}
             </div>
           </article>
         ))}
