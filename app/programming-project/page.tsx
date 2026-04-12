@@ -30,12 +30,12 @@ export default function ProgrammingProjectPage() {
         {programmingProjects.map((project) => (
           <article key={project.title} className="project-card">
             <div className="project-image-wrap">
-              <Image
+              {/* <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 className="project-image"
-              />
+              /> */}
             </div>
 
             <div className="project-card-body">

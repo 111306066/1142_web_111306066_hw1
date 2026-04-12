@@ -27,9 +27,9 @@ export default function Menu() {
           <a href="https://www.instagram.com/_chiao0_?igsh=MTIwMmJreDB6aGpkbA%3D%3D&utm_source=qr" className="social-btn" aria-label="Instagram">
             IG
           </a>
-          <a href="111306066@g.nccu.edu.tw" className="social-btn" aria-label="Email">
+          {/* <a href="111306066@g.nccu.edu.tw" className="social-btn" aria-label="Email">
             ✉
-          </a>
+          </a> */}
         </div>
       </div>
 
