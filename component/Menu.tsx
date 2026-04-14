@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const menuItems = [
   { title: "關於我", subtitle: "", href: "/about" },
@@ -16,7 +17,9 @@ export default function Menu() {
   return (
     <div className="menu-wrapper">
       <div className="profile-card">
-        <div className="profile-avatar">許</div>
+        <div className="profile-avatar">
+          <Image src="/me.jpg" alt="" width={100} height={100} />
+        </div>
         <h2 className="profile-name">許喬甯</h2>
         <p className="profile-school">Jolin</p>
 

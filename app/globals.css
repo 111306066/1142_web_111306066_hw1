@@ -78,6 +78,7 @@ select {
   font-size: 28px;
   font-weight: 700;
   color: #8a6f74;
+  overflow: hidden;
 }
 
 .profile-name {
@@ -238,6 +239,7 @@ select {
   font-weight: 800;
   color: #8a6f74;
   box-shadow: 0 8px 20px rgba(120, 90, 95, 0.1);
+  overflow: hidden;
 }
 
 .hero-title {
@@ -480,5 +482,241 @@ select {
 
   .project-card-title {
     font-size: 20px;
+  }
+}
+
+.hobby-page {
+  max-width: 100%;
+}
+
+.hobby-intro {
+  margin-bottom: 36px;
+}
+
+.hobby-coverflow-section {
+  position: relative;
+  z-index: 1;
+}
+
+.hobby-coverflow-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.hobby-gallery-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #4a3f42;
+}
+
+.hobby-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.hobby-control-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 245, 246, 0.95);
+  color: #7a5f63;
+  box-shadow: 0 4px 12px rgba(120, 90, 95, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hobby-control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(120, 90, 95, 0.14);
+}
+
+.hobby-coverflow-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0 24px;
+}
+
+.hobby-coverflow-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.hobby-coverflow-card {
+  position: relative;
+  width: 220px;
+  height: 300px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.45;
+  transform: scale(0.82);
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease,
+    box-shadow 0.45s ease,
+    filter 0.45s ease;
+  filter: blur(1px);
+}
+
+.hobby-coverflow-card.prev,
+.hobby-coverflow-card.next {
+  opacity: 0.72;
+  transform: scale(0.9);
+  filter: blur(0);
+}
+
+.hobby-coverflow-card.active {
+  width: 300px;
+  height: 420px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 18px 34px rgba(120, 90, 95, 0.16);
+  z-index: 2;
+  filter: blur(0);
+}
+
+.hobby-coverflow-card.far {
+  opacity: 0.28;
+  transform: scale(0.76);
+}
+
+.hobby-coverflow-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8c7cc, #fff1f3);
+}
+
+.hobby-coverflow-image {
+  object-fit: cover;
+}
+
+.hobby-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.hobby-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(160, 135, 140, 0.35);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    width 0.25s ease;
+}
+
+.hobby-dot.active {
+  width: 24px;
+  background: #c89aa1;
+}
+
+@media (max-width: 900px) {
+  .hobby-coverflow-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hobby-gallery-title {
+    font-size: 20px;
+  }
+
+  .hobby-coverflow-frame {
+    padding: 16px 0 20px;
+  }
+
+  .hobby-coverflow-track {
+    gap: 14px;
+  }
+
+  .hobby-coverflow-card {
+    width: 120px;
+    height: 170px;
+    border-radius: 18px;
+  }
+
+  .hobby-coverflow-card.active {
+    width: 180px;
+    height: 250px;
+  }
+
+  .hobby-coverflow-image-wrap {
+    border-radius: 18px;
+  }
+}
+
+.about-page {
+  max-width: 100%;
+}
+
+.about-intro-card {
+  background: rgba(255, 245, 246, 0.7);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(120, 90, 95, 0.08);
+  margin-bottom: 24px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background: rgba(255, 245, 246, 0.78);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(120, 90, 95, 0.08);
+}
+
+.about-card-wide {
+  grid-column: 1 / -1;
+}
+
+.about-card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #4a3f42;
+  margin-bottom: 14px;
+}
+
+.about-card-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6e5a5e;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card-wide {
+    grid-column: auto;
+  }
+
+  .about-intro-card,
+  .about-card {
+    padding: 20px;
   }
 }
